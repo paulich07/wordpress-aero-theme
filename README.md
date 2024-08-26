@@ -1,3 +1,3 @@
  # WIP
 
-Creating a boilerplate theme for my next projects
+Creating an essential boilerplate theme for my next projects
