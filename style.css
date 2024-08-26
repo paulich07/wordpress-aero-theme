@@ -1,0 +1,174 @@
+/*
+Theme Name: Aero
+Theme URI: http://example.com/aero-theme/
+Author: Paulina Lichota
+Author URI: https://paulinalichota.dev/
+Description: A sleek and modern WordPress theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: aero-theme
+*/
+
+/* Import San Francisco font */
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--wp--preset--font-family--sf-pro-display);
+    line-height: 1.6;
+    background-color: var(--wp--preset--color--background);
+    color: var(--wp--preset--color--foreground);
+}
+
+a {
+    color: var(--wp--preset--color--primary);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background-color: rgba(var(--wp--preset--color--background-rgb), 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+/* Sidebar */
+.widget-area {
+    padding: 1rem;
+    background-color: var(--wp--preset--color--background);
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.widget {
+    margin-bottom: 1.5rem;
+}
+
+.widget:last-child {
+    margin-bottom: 0;
+}
+
+.widget-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--wp--preset--color--primary);
+}
+
+/* Main content */
+main {
+    max-width: var(--wp--style--global--content-size);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Cards */
+.card {
+    background-color: var(--wp--preset--color--card-background);
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.button, .wp-block-button__link {
+    display: inline-block;
+    background-color: var(--wp--preset--color--primary);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover, .wp-block-button__link:hover {
+    background-color: var(--wp--preset--color--secondary);
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background-color: var(--wp--preset--color--footer-background);
+    color: var(--wp--preset--color--footer-text);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Forms */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--wp--preset--color--border);
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--wp--preset--color--background-dark);
+        color: var(--wp--preset--color--foreground-dark);
+    }
+
+    header {
+        background-color: rgba(var(--wp--preset--color--background-dark-rgb), 0.8);
+    }
+
+    .card {
+        background-color: var(--wp--preset--color--card-background-dark);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        background-color: var(--wp--preset--color--input-background-dark);
+        border-color: var(--wp--preset--color--border-dark);
+        color: var(--wp--preset--color--foreground-dark);
+    }
+}
