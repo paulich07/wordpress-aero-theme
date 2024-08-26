@@ -16,8 +16,8 @@ function aero_theme_setup() {
 add_action('after_setup_theme', 'aero_theme_setup');
 
 function aero_theme_scripts() {
-    wp_enqueue_style('aero-theme-style', get_stylesheet_uri(), array(), '1.0.0');
-    wp_enqueue_script('aero-theme-script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_style('aero-theme-style', get_stylesheet_uri(), array(), _S_VERSION);
+    wp_enqueue_script('aero-theme-script', get_template_directory_uri() . '/js/script.js', array('jquery'), _S_VERSION, true);
 }
 add_action('wp_enqueue_scripts', 'aero_theme_scripts');
 
